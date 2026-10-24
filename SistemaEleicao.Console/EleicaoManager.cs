@@ -66,9 +66,8 @@ namespace SistemaEleicao.Console
 
             identificador = identificador.Trim();
 
-            if (!eleitores.TryGetValue(
-                identificador, out Eleitor eleitor))
-                return false;
+             if (!eleitores.TryGetValue(identificador, out Eleitor? eleitor))
+             return false;
 
             if (eleitor.JaVotou)
                 return false;
